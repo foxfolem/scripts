@@ -1,1 +1,1 @@
-nicks = ['Foxkrak','junior72']
+nicks = ['junior72']
