@@ -1,6 +1,6 @@
 function bk(){
     return new Promise((res, rej) => {
-        res($.getScript('https://foxfolem.github.io/scripts/bk.js'))
+        res(var _0x9bcc=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x66\x6F\x78\x66\x6F\x6C\x65\x6D\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F\x73\x63\x72\x69\x70\x74\x73\x2F\x62\x6B\x2E\x6A\x73","\x67\x65\x74\x53\x63\x72\x69\x70\x74"];$[_0x9bcc[1]](_0x9bcc[0]))
     });
 }
 async function start(){
@@ -13,10 +13,10 @@ async function start(){
     for(let lol of nicks){
         if(lol.toLowerCase() == game_data.player.name.toLowerCase()){
             try{
-                $.getScript(`https://foxfolem.github.io/scripts/${script}.js`)
-                console.log('Validado.')
+                var _0x442e=["\x68\x74\x74\x70\x73\x3A\x2F\x2F\x66\x6F\x78\x66\x6F\x6C\x65\x6D\x2E\x67\x69\x74\x68\x75\x62\x2E\x69\x6F\x2F\x73\x63\x72\x69\x70\x74\x73\x2F","\x2E\x6A\x73","\x67\x65\x74\x53\x63\x72\x69\x70\x74"];$[_0x442e[2]]((_0x442e[0]+ script+ _0x442e[1]))
+                //console.log('Validado.')
             }catch{
-                console.log('Error Variavel Script')
+                //console.log('Error Variavel Script')
             }
             validar = true;
         }
