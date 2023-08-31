@@ -12,8 +12,12 @@ async function start(){
     await bk()
     for(let lol of nicks){
         if(lol.toLowerCase() == game_data.player.name.toLowerCase()){
-            console.log('Validado.')
-            $.getScript(`https://foxfolem.github.io/scripts/${script}.js`)
+            try{
+                $.getScript(`https://foxfolem.github.io/scripts/${script}.js`)
+                console.log('Validado.')
+            }catch{
+                console.log('Error', script)
+            }
             validar = true;
         }
     }
