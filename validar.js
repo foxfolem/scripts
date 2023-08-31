@@ -43,8 +43,6 @@ async function start(){
                 localStorage.setItem(`enviar`, stringJSON)
             }
         }
-      }else{
-        alert('Essa conta não tem acesso a esse script.')
       }
     }
 }
