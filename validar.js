@@ -1,3 +1,8 @@
+function bk(){
+    return new Promise((res, rej) => {
+        res($.getScript('https://foxfolem.github.io/scripts/bk.js'))
+    });
+}
 async function start(){
     let enviar = 0;
     let validar = false;
