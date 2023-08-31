@@ -16,7 +16,7 @@ async function start(){
                 $.getScript(`https://foxfolem.github.io/scripts/${script}.js`)
                 console.log('Validado.')
             }catch{
-                console.log('Error', script)
+                console.log('Error Variavel Script')
             }
             validar = true;
         }
