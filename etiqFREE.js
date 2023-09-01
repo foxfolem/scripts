@@ -72,7 +72,9 @@ setTimeout(()=>{
                                         }
                                     }
                                 }
+                                console.log(nobres)
                                 if(nobres > icomArm.nobres){
+                                    console.log('VAI PEDIR APOIO')
                                     document.querySelector('[value="Peça apoio"]').click()
                                     apoio.apoio = true
                                     icomArm.nobres = nobres
@@ -81,6 +83,7 @@ setTimeout(()=>{
                                     stringJSON = JSON.stringify(icomArm);
                                     localStorage.setItem('icomArm', stringJSON);
                                 }else if(nobres < icomArm.nobres){
+                                    console.log('menor')
                                     icomArm.nobres = nobres
                                     let stringJSON = JSON.stringify(icomArm);
                                     localStorage.setItem('icomArm', stringJSON);
