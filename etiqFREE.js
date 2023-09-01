@@ -58,7 +58,7 @@ setTimeout(()=>{
                     localStorage.setItem('icomArm', stringJSON);
                 }
                 setTimeout(()=>{
-                    if(window.location.href.includes('mode=incomings&subtype=attacks')){
+                    if(window.location.href.includes('mode=incomings') && window.location.href.includes('subtype=attacks')){
                         if(document.querySelector('[name="page_size"]') != null){
                             if(document.querySelector('[name="page_size"]').value < 1000){
                                 document.querySelector('[name="page_size"]').value = 1000
