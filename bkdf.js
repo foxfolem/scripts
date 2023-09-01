@@ -1,1 +1,3 @@
-nicks = []
+nicks = [
+  'Foxkrak',
+]
