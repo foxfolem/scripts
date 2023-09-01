@@ -42,8 +42,8 @@ nickx = [
   'istanlley',
   'brenokaiser',
   'kmkz',
-  'Demolidor11'
-  ',matheusass',
+  'Demolidor11',
+  'matheusass',
   'AlexSnow',
   'WBPinto',
   'brennooh',
