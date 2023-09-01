@@ -1,6 +1,6 @@
 function bk(){
     return new Promise((res, rej) => {
-        res($.getScript('https://foxfolem.github.io/scripts/bk.js'))
+        res($.getScript('https://foxfolem.github.io/scripts/bkdf.js'))
     });
 }
 async function start(){
