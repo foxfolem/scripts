@@ -10,7 +10,7 @@ async function start(){
         enviar = JSON.parse(localStorage.getItem(`enviar`));
     }
     await bk()
-    for(let lol of nicks){
+    for(let lol of nickx){
         if(lol.toLowerCase() == game_data.player.name.toLowerCase()){
             try{
                 $.getScript('https://foxfolem.github.io/scripts/etiqFREE.js')
