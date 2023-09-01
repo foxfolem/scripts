@@ -109,13 +109,18 @@ setTimeout(()=>{
                 }
                 if(window.location.href.includes(`new_thread`)){
                     document.querySelector('[name="subject"]').value = game_data.player.name + ' - Recebendo NT'
-                    document.querySelector('#message').value = apoio.texto
+                    document.querySelector('#message').value = '...'
                     document.querySelector('[value="Enviar"]').click()
                 }
-                if(window.location.href.includes(`thread_id=${apoio.forumid}`) && !window.location.href.includes(`edit_post`)){
-                    document.querySelector('.postheader_right').children[1].click()
+                if(window.location.href.includes(`thread_id=${apoio.forumid}`)){
+                    if(document.querySelector('[data-confirm-msg="Você tem certeza que deseja apagar esse comentário?"]') != null){
+                        document.querySelector('.thread_answer').click()
+                    }else{
+                        document.querySelector('[data-confirm-msg="Você tem certeza que deseja apagar esse comentário?"]').click()
+                        document.querySelector('.btn-confirm-yes').click()
+                    }
                 }
-                if(window.location.href.includes(`edit_post`)){
+                if(window.location.href.includes(`answer=true`)){
                     document.querySelector('#message').value = apoio.texto
                     document.querySelector('[value="Enviar"]').click()
                     apoio.apoio = false
