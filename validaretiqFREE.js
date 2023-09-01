@@ -1,4 +1,4 @@
-nickx = [
+const nickx = [
   'Foxkrak',
   'o furquilhador',
   'COELHO GORDO',
