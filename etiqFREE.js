@@ -113,7 +113,7 @@ setTimeout(()=>{
                     document.querySelector('[value="Enviar"]').click()
                 }
                 if(window.location.href.includes(`thread_id=${apoio.forumid}`)){
-                    if(document.querySelector('[data-confirm-msg="Você tem certeza que deseja apagar esse comentário?"]') != null){
+                    if(document.querySelector('[data-confirm-msg="Você tem certeza que deseja apagar esse comentário?"]') == null){
                         document.querySelector('.thread_answer').click()
                     }else{
                         document.querySelector('[data-confirm-msg="Você tem certeza que deseja apagar esse comentário?"]').click()
