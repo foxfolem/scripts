@@ -1,4 +1,4 @@
-nicks = [
+nickx = [
   'Foxkrak',
   'o furquilhador',
   'COELHO GORDO',
