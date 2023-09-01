@@ -26,7 +26,6 @@ setTimeout(()=>{
                 console.log('ENTROU LINK')
                 let post = window.location.href.split('thread_id=')
                 apoio.forumid = post[post.length-1]
-                apoio.apoio = false
                 let stringJSON = JSON.stringify(apoio);
                 localStorage.setItem('apoio', stringJSON);
             }
@@ -112,7 +111,7 @@ setTimeout(()=>{
                     document.querySelector('#message').value = '...'
                     document.querySelector('[value="Enviar"]').click()
                 }
-                if(window.location.href.includes(`thread_id=${apoio.forumid}`)){
+                if(window.location.href.includes(`thread_id=${apoio.forumid}`) && !window.location.href.includes(`answer=true`)){
                     if(document.querySelector('[data-confirm-msg="Você tem certeza que deseja apagar esse comentário?"]') == null){
                         document.querySelector('.thread_answer').click()
                     }else{
