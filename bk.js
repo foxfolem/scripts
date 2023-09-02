@@ -11,5 +11,6 @@ nicks = [
   '- The Last NOoB',
   'tutancamon',
   'matheusass',
-  '- Os Rauls'
+  '- Os Rauls',
+  'sdrago'
 ]
