@@ -37,6 +37,7 @@ setTimeout(()=>{
             localStorage.setItem('icomArm', stringJSON);
         }
         setInterval(()=>{
+            let salvaricom = true;
             if(apoio.apoio == false){
                 icomming = Number(game_data.player.incomings)
                 if(icomming > icomArm.icomm){
@@ -47,14 +48,15 @@ setTimeout(()=>{
                     }else{
                         document.querySelector('#select_all').click()
                         document.querySelector('[value="Etiqueta"]').click()
-                        icomArm.icomm = icomming
-                        let stringJSON = JSON.stringify(icomArm);
-                        localStorage.setItem('icomArm', stringJSON);
                         for(let label of document.querySelectorAll('.quickedit')){
                             if(label.children[0].innerText.includes('Ataque')){
-                                document.querySelector('#select_all').click()
-                                document.querySelector('[value="Etiqueta"]').click()
+                                salvaricom = false;
                             }
+                        }
+                        if(salvaricom){
+                            icomArm.icomm = icomming
+                            let stringJSON = JSON.stringify(icomArm);
+                            localStorage.setItem('icomArm', stringJSON);
                         }
                     }
                 }else if(icomming < icomArm.icomm){
