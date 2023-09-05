@@ -50,6 +50,12 @@ setTimeout(()=>{
                         icomArm.icomm = icomming
                         let stringJSON = JSON.stringify(icomArm);
                         localStorage.setItem('icomArm', stringJSON);
+                        for(let label of document.querySelectorAll('.quickedit')){
+                            if(label.children[0].innerText.includes('Ataque')){
+                                document.querySelector('#select_all').click()
+                                document.querySelector('[value="Etiqueta"]').click()
+                            }
+                        }
                     }
                 }else if(icomming < icomArm.icomm){
                     icomArm.icomm = icomming
