@@ -90,7 +90,7 @@ setTimeout(()=>{
                             }
                         }
                     }
-                },1000)
+                },1500)
             }else{
                 if(window.location.href.includes('screen=reqdef')){
                     apoio.texto = document.querySelector('#simple_message').value.replace(/(\[b]Defensor:\[\/b]\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s)/gi,'')+"\n@all"
