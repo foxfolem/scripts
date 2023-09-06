@@ -107,7 +107,9 @@ setTimeout(()=>{
                     localStorage.setItem('apoio', stringJSON);
                 }
                 if(!window.location.href.includes(`forum_id=${apoio.idfo}`)){
-                    window.location.href = `/game.php?village=${game_data.village.id}&screen=forum`
+                    if(!window.location.href.includes('screen=forum')){
+                        window.location.href = `/game.php?village=${game_data.village.id}&screen=forum`
+                    }
                     for(let forum of document.querySelectorAll('.forum')){
                       if(forum.children[0].innerText.toLowerCase().includes('apoio')){
                         let arrforumid = forum.children[0].href.split('forum_id=')
