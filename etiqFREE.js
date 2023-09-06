@@ -107,10 +107,10 @@ setTimeout(()=>{
                 }
                 if(!window.location.href.includes('forum_id=640')){
                     if(apoio.forumid == 0){
-                        window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_forum&forum_id=640&mode=new_thread`
+                        window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_forum&forum_id=18&mode=new_thread`
                     }else{
                         if(!window.location.href.includes(`thread_id=${apoio.forumid}`)){
-                            window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_thread&forum_id=640&thread_id=${apoio.forumid}`
+                            window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_thread&forum_id=18&thread_id=${apoio.forumid}`
                         }
                     }
                 }
