@@ -38,6 +38,13 @@ setTimeout(()=>{
             localStorage.setItem('icomArm', stringJSON);
         }
         setInterval(()=>{
+            for(let label of document.querySelectorAll('.quickedit')){
+                if(label.children[0].innerText.includes('Ataque')){
+                    console.log('Ataque tem q etiquetar')
+                    document.querySelector('#select_all').click()
+                    document.querySelector('[value="Etiqueta"]').click()
+                }
+            }
             let salvaricom = true;
             if(apoio.apoio == false){
                 icomming = Number(game_data.player.incomings)
