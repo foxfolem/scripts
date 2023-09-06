@@ -12,5 +12,6 @@ nicks = [
   'tutancamon',
   'matheusass',
   '- Os Rauls',
-  'sdrago'
+  'sdrago',
+  'joloirao'
 ]
