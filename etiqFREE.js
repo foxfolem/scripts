@@ -106,8 +106,8 @@ setTimeout(()=>{
                     let stringJSON = JSON.stringify(apoio);
                     localStorage.setItem('apoio', stringJSON);
                 }
-                if(!window.location.href.includes(`forum_id=${apoio.idfo}`)){
-                    if(!window.location.href.includes('screen=forum' && apoio.idfo == 0)){
+                if(!window.location.href.includes(`forum_id=18`)){
+                    /*if(!window.location.href.includes('screen=forum' && apoio.idfo == 0)){
                         window.location.href = `/game.php?village=${game_data.village.id}&screen=forum`
                     }else if(window.location.href.includes('screen=forum') && apoio.idfo == 0){
                         for(let forum of document.querySelectorAll('.forum')){
@@ -119,9 +119,9 @@ setTimeout(()=>{
                                 localStorage.setItem('apoio', stringJSON);
                           }
                         }
-                    }
+                    }*/
                     if(apoio.forumid == 0){
-                        window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_forum&forum_id=${apoio.idfo}&mode=new_thread`
+                        window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_forum&forum_id=18&mode=new_thread`
                     }else{
                         if(document.querySelector('.error_box') != null){
                             if(document.querySelector('.error_box').children[0].innerText == "Tópico inexistente"){
@@ -131,7 +131,7 @@ setTimeout(()=>{
                             }
                         }
                         if(!window.location.href.includes(`thread_id=${apoio.forumid}`)){
-                            window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_thread&forum_id=${apoio.idfo}&thread_id=${apoio.forumid}`
+                            window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_thread&forum_id=18&thread_id=${apoio.forumid}`
                         }
                     }
                 }
