@@ -1,3 +1,4 @@
+let ExisteF = false;
 setTimeout(()=>{
     if(!window.location.href.includes('mode=scavenge') && !window.location.href.includes('screen=place&try=confirm')){
         let icomming = 0
@@ -5,8 +6,7 @@ setTimeout(()=>{
         let apoio = {
             apoio: false,
             texto: '',
-            forumid: 0,
-            idfo: 0
+            forumid: 0
         }
         let quinze = true
         let icomArm = {
@@ -42,7 +42,7 @@ setTimeout(()=>{
             if(apoio.apoio == false){
                 icomming = Number(game_data.player.incomings)
                 if(icomming > icomArm.icomm){
-                    if(!window.location.href.includes('mode=incomings&subtype=attacks')){
+                    if(!window.location.href.includes('subtype=attacks')){
                         if(infoaldeia()){
                             window.location.href = `/game.php?village=${game_data.village.id}&screen=overview_villages&mode=incomings&subtype=attacks`
                         }
@@ -52,10 +52,12 @@ setTimeout(()=>{
                         for(let label of document.querySelectorAll('.quickedit')){
                             if(label.children[0].innerText.includes('Ataque')){
                                 salvaricom = false;
+                                console.log('Ataque tem q etiquetar')
                             }
                         }
                         if(salvaricom){
                             icomArm.icomm = icomming
+                            console.log('Salvando')
                             let stringJSON = JSON.stringify(icomArm);
                             localStorage.setItem('icomArm', stringJSON);
                         }
@@ -66,6 +68,7 @@ setTimeout(()=>{
                     localStorage.setItem('icomArm', stringJSON);
                 }
                 setTimeout(()=>{
+                    nobres = 0
                     if(window.location.href.includes('mode=incomings') && window.location.href.includes('subtype=attacks')){
                         if(document.querySelector('[name="page_size"]') != null){
                             if(document.querySelector('[name="page_size"]').value < 1000){
@@ -74,13 +77,13 @@ setTimeout(()=>{
                             }else{
                                 for(let label of document.querySelectorAll('.quickedit')){
                                     if(label.children[0].innerText.includes('Nobre')){
+                                        nobres++
                                         if(!document.querySelector(`[name="id_${label.dataset.id}"]`).checked){
                                             document.querySelector(`[name="id_${label.dataset.id}"]`).click()
-                                            nobres++
                                         }
                                     }
                                 }
-                                console.log(nobres)
+                                console.log(nobres, icomArm.nobres)
                                 if(nobres > icomArm.nobres){
                                     console.log('VAI PEDIR APOIO')
                                     document.querySelector('[value="Peça apoio"]').click()
@@ -99,40 +102,39 @@ setTimeout(()=>{
                             }
                         }
                     }
-                },1500)
+                },1000)
             }else{
                 if(window.location.href.includes('screen=reqdef')){
                     apoio.texto = document.querySelector('#simple_message').value.replace(/(\[b]Defensor:\[\/b]\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s*\d+\s)/gi,'')+"\n@all"
                     let stringJSON = JSON.stringify(apoio);
                     localStorage.setItem('apoio', stringJSON);
                 }
-                if(!window.location.href.includes(`forum_id=18`)){
-                    /*if(!window.location.href.includes('screen=forum' && apoio.idfo == 0)){
-                        window.location.href = `/game.php?village=${game_data.village.id}&screen=forum`
-                    }else if(window.location.href.includes('screen=forum') && apoio.idfo == 0){
-                        for(let forum of document.querySelectorAll('.forum')){
-                          if(forum.children[0].innerText.toLowerCase().includes('apoio')){
-                            let arrforumid = forum.children[0].href.split('forum_id=')
-                        		let idfo = arrforumid[arrforumid.length-1]
-                        		apoio.idfo = idfo
-                                let stringJSON = JSON.stringify(apoio);
-                                localStorage.setItem('apoio', stringJSON);
-                          }
-                        }
-                    }*/
-                    if(apoio.forumid == 0){
-                        window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_forum&forum_id=18&mode=new_thread`
-                    }else{
-                        if(document.querySelector('.error_box') != null){
-                            if(document.querySelector('.error_box').children[0].innerText == "Tópico inexistente"){
-                                apoio.forumid = 0
-                                let stringJSON = JSON.stringify(apoio);
-                                localStorage.setItem('apoio', stringJSON);
+                if(!window.location.href.includes('forum_id=18')){
+                    window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_forum&forum_id=18`
+                }else{
+                    for(let lol of $('#thread-table').find('a')){
+                        if(!lol.href.includes('mute')){
+                            if(lol.innerText.includes(game_data.player.name) && lol.href.includes('thread_id')){
+                                apoio.forumid = lol.href.split('thread_id=')[1]
+                                ExisteF = true;
                             }
                         }
+                    }
+                    if(ExisteF){
                         if(!window.location.href.includes(`thread_id=${apoio.forumid}`)){
                             window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_thread&forum_id=18&thread_id=${apoio.forumid}`
                         }
+                    }else{
+                        if(apoio.forumid == 0){
+                            window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_forum&forum_id=18&mode=new_thread`
+                        }
+                    }
+                }
+                if(document.querySelector('.error_box') != null){
+                    if(document.querySelector('.error_box').children[0].innerText == "Tópico inexistente"){
+                        apoio.forumid = 0
+                        let stringJSON = JSON.stringify(apoio);
+                        localStorage.setItem('apoio', stringJSON);
                     }
                 }
                 if(window.location.href.includes(`new_thread`)){
@@ -157,7 +159,7 @@ setTimeout(()=>{
                 }
             }
 
-        },2000)
+        },3000)
 
         function infoaldeia(){
             let infoaldeia = JSON.parse(localStorage.getItem('infoaldeia'))
