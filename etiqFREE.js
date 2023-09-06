@@ -108,7 +108,7 @@ setTimeout(()=>{
                 }
                 if(!window.location.href.includes(`forum_id=${apoio.idfo}`)){
                     if(!window.location.href.includes('screen=forum')){
-                        window.location.href = `/game.php?village=${game_data.village.id}&screen=forum`
+                        //window.location.href = `/game.php?village=${game_data.village.id}&screen=forum`
                     }
                     for(let forum of document.querySelectorAll('.forum')){
                       if(forum.children[0].innerText.toLowerCase().includes('apoio')){
