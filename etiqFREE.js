@@ -5,7 +5,8 @@ setTimeout(()=>{
         let apoio = {
             apoio: false,
             texto: '',
-            forumid: 0
+            forumid: 0,
+            idfo: 0
         }
         let quinze = true
         let icomArm = {
@@ -105,12 +106,27 @@ setTimeout(()=>{
                     let stringJSON = JSON.stringify(apoio);
                     localStorage.setItem('apoio', stringJSON);
                 }
-                if(!window.location.href.includes('forum_id=640')){
+                if(!window.location.href.includes(`forum_id=${apoio.idfo}`)){
+                    window.location.href = `/game.php?village=${game_data.village.id}&screen=forum`
+                    for(let forum of document.querySelectorAll('.forum')){
+                      if(forum.children[0].innerText.toLowerCase().includes('apoio')){
+                        let arrforumid = forum.children[0].href.split('forum_id=')
+                    		let idfo = arrforumid[arrforumid.length-1]
+                    		apoio.idfo = idfo
+                            let stringJSON = JSON.stringify(apoio);
+                            localStorage.setItem('apoio', stringJSON);
+                      }
+                    }
                     if(apoio.forumid == 0){
-                        window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_forum&forum_id=18&mode=new_thread`
+                        window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_forum&forum_id=${apoio.idfo}&mode=new_thread`
                     }else{
+                        if(document.querySelector('.error_box').children[0].innerText == "Tópico inexistente"){
+                            apoio.forumid = 0
+                            let stringJSON = JSON.stringify(apoio);
+                            localStorage.setItem('apoio', stringJSON);
+                        }
                         if(!window.location.href.includes(`thread_id=${apoio.forumid}`)){
-                            window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_thread&forum_id=18&thread_id=${apoio.forumid}`
+                            window.location.href = `/game.php?village=${game_data.village.id}&screen=forum&screenmode=view_thread&forum_id=${apoio.idfo}&thread_id=${apoio.forumid}`
                         }
                     }
                 }
