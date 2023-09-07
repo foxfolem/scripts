@@ -13,5 +13,6 @@ nicks = [
   'matheusass',
   '- Os Rauls',
   'sdrago',
-  'joloirao'
+  'joloirao',
+  'Leo17Matador'
 ]
