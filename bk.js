@@ -8,7 +8,6 @@ nicks = [
   'WBPinto',
   'xxxhygorxxx',
   'chuck.mauricio',
-  '- The Last NOoB',
   'tutancamon',
   'matheusass',
   '- Os Rauls',
