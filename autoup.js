@@ -1234,7 +1234,7 @@ let htm = `<div class="popup_box show" id="popup_box_twcheese-scavenge-preferenc
     <div class="popup_box_content">
         <div class="qrcode">
             <h3>Donate - Pix</h3>
-            <img src="https://i.ibb.co/KDSHfm7/image.png" width="366" heigth="366">
+            <img src="https://lh3.googleusercontent.com/pw/ADCreHe_PtDQ7eaDxh_gU2TW5-We9tMWcmAEqQkWbGYGFSkAZHYuOz2_IHiGaSoi4JHpQhuE5mEnNoaaYmHiiy2tBgKyuV4cNEivqtGedlOU6HkVMNmvkn-_-e5fPgiHdn7hHuMQf6itQSvT3oeq-1q7qJw=w300-h301-s-no-gm?authuser=0" width="366" heigth="366">
         </div></div></div><div class="fader"></div>`
 
 
