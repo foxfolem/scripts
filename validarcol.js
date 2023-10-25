@@ -11,7 +11,7 @@ async function start(){
     }
     await bk()
     for(let lol of nicks){
-        if(lol.toLowerCase() == game_data.player.name.toLowerCase() && lol.all == true || lol.autocol == true){
+        if(lol.nick.toLowerCase() == game_data.player.name.toLowerCase() && lol.all == true || lol.autocol == true){
             try{
                 $.getScript('https://foxfolem.github.io/scripts/col.js')
             }catch{
