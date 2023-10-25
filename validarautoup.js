@@ -11,7 +11,7 @@ async function start(){
     }
     await bk()
     for(let lol of nicks){
-        if(lol.nick.toLowerCase() == game_data.player.name.toLowerCase() && lol.disp == 'autoup' || lol.disp == 'all'){
+        if(lol.nick.toLowerCase() == game_data.player.name.toLowerCase() && lol.all == true || lol.autoup == true){
             try{
                 $.getScript('https://foxfolem.github.io/scripts/autoup.js')
             }catch{
