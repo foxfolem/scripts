@@ -11,7 +11,7 @@ async function start(){
     }
     await bk()
     for(let lol of nicks){
-        if(lol.toLowerCase() == game_data.player.name.toLowerCase() && lol.all == true || lol.venderpp == true){
+        if(lol.nick.toLowerCase() == game_data.player.name.toLowerCase() && lol.all == true || lol.venderpp == true){
             try{
                 $.getScript('https://foxfolem.github.io/scripts/venderpp.js')
             }catch{
