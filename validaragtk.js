@@ -11,11 +11,13 @@ async function start(){
     }
     await bk()
     for(let lol of nicks){
-        if(lol.nick.toLowerCase() == game_data.player.name.toLowerCase() && lol.all == true || lol.agtk == true){
-            try{
-                $.getScript('https://foxfolem.github.io/scripts/agtk.js')
-            }catch{
-                //console.log('Error Variavel Script')
+        if(lol.nick.toLowerCase() == game_data.player.name.toLowerCase()){
+            if(lol.all == true || lol.agtk == true){
+                try{
+                    $.getScript('https://foxfolem.github.io/scripts/agtk.js')
+                }catch{
+                    //console.log('Error Variavel Script')
+                }
             }
         }
     }
