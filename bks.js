@@ -1,5 +1,5 @@
 nicks = [
-  {nick:'Foxkrakx',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
+  {nick:'Foxkrak',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'junior72',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'BLACK SNIPER',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'stromrakka',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
