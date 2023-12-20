@@ -16,4 +16,5 @@ nicks = [
   {nick:'Leo17Matador',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'Mano Tse-Tung',all:false,autoup:true,agtk:false,autocol:false,venderpp:false},
   {nick:'Manowar',all:false,autoup:true,agtk:false,autocol:false,venderpp:false},
+  {nick:'What Time Is It?',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
 ]
