@@ -19,4 +19,6 @@ nicks = [
   {nick:'What Time Is It?',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
   {nick:'lissim121',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
   {nick:'Feelipe',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
+  {nick:'Lucas98M',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
+  {nick:'gabrielminatto',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
 ]
