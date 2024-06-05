@@ -22,5 +22,6 @@ nicks = [
   {nick:'Lucas98M',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
   {nick:'gabrielminatto',all:false,autoup:false,agtk:true,autocol:true,venderpp:false},
   {nick:'fulampa',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
-  {nick:'mateusiglesias',all:false,autoup:false,agtk:true,autocol:false,venderpp:false}
+  {nick:'mateusiglesias',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
+  {nick:'Elindor',all:false,autoup:false,agtk:true,autocol:false,venderpp:false}
 ]
