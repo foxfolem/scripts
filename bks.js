@@ -4,7 +4,8 @@ nicks = [
   {nick:'junior72',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'BLACK SNIPER',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'stromrakka',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
-  {nick:'Filho de Zeus',all:false,autoup:true,agtk:false,autocol:false,venderpp:false}, // Não ta moralizado.
+  {nick:'Filho de Zeus',all:true,autoup:true,agtk:true,autocol:true,venderpp:true}, // Não ta moralizado.
+  {nick:'senhordosquiz',all:false,autoup:true,agtk:false,autocol:false,venderpp:false}, // Não ta moralizado.
   {nick:'igor89araujo',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'Frost',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'WBPinto',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
