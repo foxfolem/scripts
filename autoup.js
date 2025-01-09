@@ -514,6 +514,7 @@ function getConstrução_proximo_edificio() {
             let próximo_edifício = document.getElementById(proximo);
             var Visivel = próximo_edifício.offsetWidth > 0 || próximo_edifício.offsetHeight > 0;
             let farm;
+            let poppercent = (Number(document.querySelector('#pop_max_label').innerText) / 100) * (Number(document.querySelector('#pop_current_label').innerText) / 100)
             for(let i = 0; i<=30; i++){
                 if(document.getElementById(`main_buildlink_farm_${i}`) !== null){
                     farm = document.getElementById(`main_buildlink_farm_${i}`)
@@ -521,7 +522,7 @@ function getConstrução_proximo_edificio() {
             }
             if (Visivel){
                 instituir = próximo_edifício;
-            }else if(farm.offsetWidth > 0 || farm.offsetHeight > 0){
+            }else if(farm.offsetWidth > 0 || farm.offsetHeight > 0 && poppercent > 80){
                 instituir = farm;
             }
             if (Construção_Edificios_Ordem){
