@@ -29,5 +29,5 @@ nicks = [
   {nick:'mateusiglesias',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
   {nick:'Elindor',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
   {nick:'Mordizim',all:false,autoup:true,agtk:false,autocol:true,venderpp:true},
-  {nick:'- Shaka -',all:false,autoup:false,agtk:true,autocol:false,venderpp:false}
+  {nick:'Adriano Ferraz',all:false,autoup:false,agtk:true,autocol:false,venderpp:false}
 ]
