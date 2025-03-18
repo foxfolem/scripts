@@ -5,8 +5,8 @@ nicks = [
   {nick:'BLACK SNIPER',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'stromrakka',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'Filho de Zeus',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
-  {nick:'senhordosquiz',all:true,autoup:true,agtk:true,autocol:true,venderpp:true}, // Não ta moralizado.
-  {nick:'smierc',all:false,autoup:true,agtk:false,autocol:true,venderpp:false}, // Não ta moralizado.
+  {nick:'senhordosquiz',all:false,autoup:false,agtk:false,autocol:false,venderpp:false}, // Não ta moralizado.
+  {nick:'smierc',all:false,autoup:false,agtk:false,autocol:false,venderpp:false}, // Não ta moralizado.
   {nick:'igor89araujo',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'Frost',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
   {nick:'WBPinto',all:true,autoup:true,agtk:true,autocol:true,venderpp:true},
@@ -29,5 +29,5 @@ nicks = [
   {nick:'mateusiglesias',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
   {nick:'Elindor',all:false,autoup:false,agtk:true,autocol:false,venderpp:false},
   {nick:'Mordizim',all:false,autoup:true,agtk:false,autocol:true,venderpp:true},
-  {nick:'Adriano Ferraz',all:false,autoup:false,agtk:true,autocol:false,venderpp:false}
+  {nick:'Adriano Ferraz',all:true,autoup:true,agtk:true,autocol:true,venderpp:true}
 ]
