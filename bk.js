@@ -15,5 +15,6 @@ nicks = [
   'joloirao',
   'Leo17Matador',
   'Mano Tse-Tung',
-  'Manowar'
+  'Manowar',
+  'Adriano Ferraz'
 ]
